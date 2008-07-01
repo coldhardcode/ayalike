@@ -1,0 +1,19 @@
+<div id="menu" class="featurebox">
+ <h3>[% c.loc('Menu') %]</h3>
+ <form action="[% c.uri_for('/default') %]">
+  <fieldset>
+   <select id="work_site" onChange="AYALIKE.redirectToSiteId(this.selectedIndex)">
+    <option value="">[% c.loc('Choose A Site') %]</option>
+    [% FOREACH site = sites %]
+    <option value="[% site.id %]">[% site.name %]</option>
+    [% END %]
+   </select>
+  </fieldset>
+ </form>
+</div>
+<div class="featurebox">
+ <h3>[% c.loc('Administrada') %]</h3>
+ <ul>
+  <li><a href="[% c.uri_for('/admin/site') %]">[% c.loc('Sites') %]</a></li>
+ </ul>
+</div>

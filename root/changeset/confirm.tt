@@ -1,0 +1,9 @@
+<form method="post" action="[% c.uri_for('/changeset/apply', changeset.id) %]">
+ <p>
+  [% c.loc('Are you sure you want to apply this changeset?  [_1] entries will be modified.', changeset.revision_count) %]
+ </p>
+ <ul>
+  <li><input type="button" value="[% c.loc('No, Cancel') %]"></li>
+  <li><input type="submit" value="[% c.loc('Yes, Apply It') %]"></li>
+ </ul>
+</form>

@@ -1,0 +1,27 @@
+<table class="data">
+ <thead>
+  <tr>
+   <th>
+    [% IF entry %]
+     [% c.loc('Revisions for Entry [_1]', entry.id) %]
+    [% ELSE %]
+     [% c.loc('Revisions') %]
+    [% END %]
+   </th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>[% c.loc('ID') %]</th>
+   <th>[% c.loc('User') %]</th>
+   <th>[% c.loc('Date Created') %]</th>
+  </tr>
+  [% FOREACH rev = revisions %]
+  <tr class="[% IF loop.count % 2 %]odd[% END %]">
+   <td><a href="[% c.uri_for('/revision/show', rev.id) %]">[% rev.id %]</a></td>
+   <td>[% rev.user_id %]</td>
+   <td>[% rev.date_created %]</td>
+  </tr>
+  [% END %]
+ </tbody>
+</table>

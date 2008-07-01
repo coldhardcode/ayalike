@@ -1,0 +1,31 @@
+[% MACRO make_branch(node, visible) BLOCK;
+
+  #IF visible;
+    "<ul>\n";
+  #ELSE;
+  #  "<ul style=\"display: none\">";
+  #END;
+  IF node.isLeaf;
+    SET nodeValue = node.getNodeValue;
+    SET url = c.uri_for('/entry/show', nodeValue.id);
+    "<li style=\"padding-left: 10px\"><a href=\"$url\">$nodeValue.file_name</a></li>\n";
+  ELSE;
+    SET nodeValue = node.getNodeValue;
+    "<li><a href=\"#\">$nodeValue</a>\n";
+    SET children = node.getAllChildren();
+    FOREACH child = children;
+      make_branch(child);
+    END;
+    "</li>\n";
+  END;
+  "</ul>\n";
+ END;
+%]
+
+[% SET tree = site.get_tree_from_entries %]
+
+[% SET nodes = tree.getAllChildren %]
+[% FOREACH node = nodes %]
+  [% make_branch(node, 1) %]
+[% END %]
+

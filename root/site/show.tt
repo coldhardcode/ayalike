@@ -1,0 +1,39 @@
+<div id="context_menu">
+ <ul>
+  <li><a href="[% c.uri_for('/entry/create', site.id) %]">[% c.loc('Add Entry') %]</a></li>
+  <li><a href="[% c.uri_for('/entry/list', site.id) %]">[% c.loc('List Entries') %]</a></li>
+ </ul>
+</div>
+<table class="form">
+ <thead>
+  <tr>
+   <th colspan="2">[% c.loc('Details for Site [_1]', site.id) %]</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td class="label">[% c.loc('Name') %]:</td>
+   <td class="value">[% site.name %]</td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Time To Live') %]:</td>
+   <td class="value">[% site.ttl %]</td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Path') %]:</td>
+   <td class="value">[% site.path %]</td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Pipeline') %]:</td>
+   <td class="value">[% site.pipeline %]</td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Entries') %]:</td>
+   <td class="value">[% entries.size %]</td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Date Created') %]:</td>
+   <td class="value">[% site.date_created %]</td>
+  </tr>
+ </tbody>
+</table>

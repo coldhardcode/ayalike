@@ -1,0 +1,32 @@
+<div id="context_menu">
+ <ul>
+  <li><a href="[% c.uri_for('/admin/site/create') %]">[% c.loc('Create A New Site') %]</a></li>
+ </ul>
+</div>
+<table class="data" cellspacing="0">
+ <thead>
+  <tr>
+   <th colspan="6">[% c.loc('Sites') %]</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>[% c.loc('ID') %]</th>
+   <th>[% c.loc('Name') %]</th>
+   <th>[% c.loc('Path') %]</th>
+   <th>[% c.loc('Locked') %]</th>
+   <th>[% c.loc('Active') %]</th>
+   <th>[% c.loc('Action') %]</th>
+  </tr>
+  [% FOREACH site = sites %]
+  <tr [% IF loop.count % 2 %]class="odd"[% END %]>
+   <td>[% site.id %]</td>
+   <td><a href="[% c.uri_for('/site/show', site.id) %]">[% site.name %]</a></td>
+   <td>[% site.path %]</td>
+   <td>[% site.locked %]</td>
+   <td>[% site.active %]</td>
+   <td><a href="[% c.uri_for('/admin/site/edit', site.id) %]">[% c.loc('Edit') %]</a></td>
+  </tr>
+  [% END %]
+ </tbody>
+</table>

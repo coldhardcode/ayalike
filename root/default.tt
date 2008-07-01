@@ -1,0 +1,105 @@
+<form method="post" action="[% c.uri_for('/site/review_commit') %]">
+ <table class="data">
+  <thead>
+   <tr>
+    <th colspan="4">[% c.loc('Your Working Entries') %]</th>
+   </tr>
+  </thead>
+  [% IF working_entries %]
+  <tfoot>
+   <tr>
+    <td colspan="4"><a href="#">[% c.loc('Remove') %]</a> <input type="submit" value="[% c.loc('Commit') %]" /></td>
+   </tr>
+  </tfoot>
+  [% END %]
+  <tbody>
+   <tr>
+    <th>&#8730;</th>
+    <th>[% c.loc('Entry') %]</th>
+    <th>[% c.loc('Site') %]</th>
+    <th>[% c.loc('Date Last Modified') %]</th>
+   </tr>
+   [% IF !working_entries %]
+   <tr>
+    <td colspan="4">[% c.loc('No working entries.') %]</td>
+   </tr>
+   [% ELSE %]
+    [% FOREACH we = working_entries %]
+    <tr class="[% IF loop.count % 2 %]odd[% END %] [% IF we.is_out_of_date %]warning[% END %]">
+     [% SET entry = we.entry %]
+     [% SET site = entry.site %]
+     <td><input type="checkbox" name="we_[% we.id %]" /></td>
+     <td><a href="[% c.uri_for('/workingentry/edit', entry.id) %]">[% entry.name %]</a></td>
+     <td><a href="[% c.uri_for('/site/show', site.id) %]">[% site.name %]</a></td>
+     <td>[% we.date_last_modified %]</td>
+    </tr>
+    [% END %]
+   [% END %]
+  </tbody>
+ </table>
+</form>
+<table class="data">
+ <thead>
+  <tr>
+   <th colspan="4">[% c.loc('Latest ChangeSets') %]</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>[% c.loc('ID') %]</th>
+   <th>[% c.loc('User') %]</th>
+   <th>[% c.loc('Site') %]</th>
+   <th>[% c.loc('Revision Count') %]</th>
+   <th>[% c.loc('Date') %]</th>
+  </tr>
+  [% IF !changesets %]
+  <tr>
+   <td colspan="4">[% c.loc('No revisions.') %]</td>
+  </tr>
+  [% ELSE %]
+   [% FOREACH cs = changesets %]
+   <tr class="[% IF loop.count % 2 %]odd[% END %] [% IF !cs.applied %]warning[% END %]">
+    [% SET site = cs.site %]
+    <td><a href="[% c.uri_for('/changeset/show', cs.id) %]">[% cs.id %]</a></td>
+    <td>[% cs.user_id %]</td>
+    <td><a href="[% c.uri_for('/site/show', site.id) %]">[% site.name %]</a></td>
+    <td>[% cs.revision_count %]</td>
+    <td>[% cs.date_to_publish %]</td>
+   </tr>
+   [% END %]
+  [% END %]
+ </tbody>
+</table>
+<table class="data">
+ <thead>
+  <tr>
+   <th colspan="4">[% c.loc('Latest Revisions') %]</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>[% c.loc('ID') %]</th>
+   <th>[% c.loc('Entry') %]</th>
+   <th>[% c.loc('User') %]</th>
+   <th>[% c.loc('Site') %]</th>
+   <th>[% c.loc('Date Created') %]</th>
+  </tr>
+  [% IF !revisions %]
+  <tr>
+   <td colspan="4">[% c.loc('No revisions.') %]</td>
+  </tr>
+  [% ELSE %]
+   [% FOREACH rev = revisions %]
+   <tr class="[% IF loop.count % 2 %]odd[% END %]">
+    [% SET entry = rev.entry %]
+    [% SET site = entry.site %]
+    <td><a href="[% c.uri_for('/revision/show', rev.id) %]">[% rev.id %]</a></td>
+    <td><a href="[% c.uri_for('/entry/show', entry.id) %]">[% entry.name %]</a></td>
+    <td>[% rev.user_id %]</td>
+    <td><a href="[% c.uri_for('/site/show', site.id) %]">[% site.name %]</a></td>
+    <td>[% rev.date_created %]</td>
+   </tr>
+   [% END %]
+  [% END %]
+ </tbody>
+</table>

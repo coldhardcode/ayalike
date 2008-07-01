@@ -1,0 +1,37 @@
+[% WRAPPER wrapper.tt %]
+[% entry = revision.entry %]
+[% site = entry.site %]
+<table class="form">
+ <thead>
+  <tr>
+   <th colspan="2">[% c.loc('Revision') %] [% revision.id %]</th>
+  </tr>
+ </thead>
+ <tbody>
+   <tr>
+    <td class="label">[% c.loc('Site') %]:</td>
+    <td class="value"><a href="[% c.uri_for('/site/show', site.id) %]">[% site.name %]</a></td>
+   </tr>
+  <tr>
+   <td class="label">[% c.loc('Entry') %]:</td>
+   <td class="value"><a href="[% c.uri_for('/entry/show', entry.id) %]">[% entry.name %]</a></td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('User') %]:</td>
+   <td class="value"><a href="[% c.uri_for('/user/show', revision.user_id) %]">[% revision.user_id %]</a></td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Comment') %]:</td>
+   <td class="value">[% revision.comment %]</td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Date Created') %]:</td>
+   <td class="value">[% revision.date_created %]</td>
+  </tr>
+  <tr>
+   <td class="label">[% c.loc('Diff') %]:</td>
+   <td class="value"><pre>[% revision.diff | html %]</pre></td>
+  </tr>
+ </tbody>
+</table>
+[% END %]

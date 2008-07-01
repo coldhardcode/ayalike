@@ -1,0 +1,39 @@
+<form method="post" action="[% c.uri_for('/admin/site/create') %]">
+ <table class="form">
+  <thead>
+   <tr>
+   <th colspan="2">[% c.loc('Create Site') %]</th>
+   </tr>
+  </thead>
+  <tfoot>
+   <tr>
+    <td colspan="2"><input type="submit" value="[% c.loc('Submit') %]"></td>
+   </tr>
+  </tfoot>
+  <tbody>
+   <tr>
+    <td><label class="[% name_class %]" for="name">[% c.loc('Name') %]</label></td>
+    <td><input type="text" id="name" name="name" value="[% site.name %]"></td>
+   </tr>
+   <tr>
+    <td><label class="[% ttl_class %]" for="ttl">[% c.loc('Time To Live') %]</label></td>
+    <td><input type="text" id="ttl" name="ttl" value="[% site.ttl %]"></td>
+   </tr>
+   <tr>
+    <td><label class="[% path_class %]" for="path">[% c.loc('Path') %]</label></td>
+    <td><input type="text" id="path" name="path" value="[% site.path %]"></td>
+   </tr>
+   <tr>
+    <td><label class="[% pipe_class %]" for="pipe">[% c.loc('Pipeline') %]</label></td>
+    <td>
+     <select name="pipe">
+      <option value="">None</option>
+      [% FOREACH pipe = pipelines.keys.sort %]
+      <option value="[% pipe %]">[% pipe %]</option>
+      [% END %]
+     </select>
+    </td>
+   </tr>
+  </tbody>
+ </table>
+</form>

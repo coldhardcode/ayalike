@@ -1,0 +1,30 @@
+[% page.layout = 'single-center' %]
+<div id="success_msg" [% IF !success %]style="display: none;"[% END %]>[% success %]</div>
+<div id="error_msg" [% IF !error %]style="display: none;"[% END %]>[% error %]</div>
+<div id="warning_msg" [% IF !warning %]style="display: none;"[% END %]>[% warning %]</div>
+<form action="[% c.uri_for('/auth/login') %]" method="POST">
+<fieldset>
+ <table class="form">
+  <thead>
+   <tr>
+    <th colspan="2">[% c.loc('Login') %]</th> 
+   </tr>
+  </thead>
+  <tfoot>
+   <tr>
+    <td colspan="2"><input type="submit" value="[% c.loc('Login') %]"></td>
+   </tr>
+  </tfoot>
+  <tbody>
+   <tr>
+    <td><label for="username">[% c.loc('Username') %]</label></td>
+    <td><input id="username" name="username" type="text" value=""></td>
+   </tr>
+   <tr>
+    <td><label for="password">[% c.loc('Password') %]</label></td>
+    <td><input id="password" name="password" type="password" value=""></td>
+   </tr>
+  </tbody>
+ </table>
+</fieldset>
+</form>

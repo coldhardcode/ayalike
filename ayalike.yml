@@ -1,0 +1,40 @@
+---
+name: Ayalike
+pipelines:
+    Textile:
+        - Ayalike::Processor::Textile
+    Markdown:
+        - Ayalike::Processor::Markdown
+Model::DBIC:
+    schema_class: Ayalike::Schema
+    connect_info:
+        - DBI:mysql:database=ayalike;host=localhost
+        - ayalike
+        - ayalike
+        -
+            quote_char: '`'
+            name_sep: .
+authentication:
+    default_realm: members
+    realms:
+        members:
+            credential:
+                class: Password
+                password_field: password
+                password_type: clear
+            store:
+                class: Minimal
+                users:
+                    admin:
+                        password: test
+                        roles:
+                            - Administrator
+                    editor:
+                        password: test
+                        roles:
+                            - Editor
+View::TT:
+    TEMPLATE_EXTENSION: .tt
+    TIMER: 1
+    RECURSION: 1
+            

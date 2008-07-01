@@ -1,0 +1,52 @@
+<div id="context_menu">
+ <ul>
+  <li><a href="[% c.uri_for('/entry/view', entry.site.id, entry.name) %]">[% c.loc('View Entry') %]</a></li>
+  <li><a href="[% c.uri_for('/workingentry/edit', entry.id) %]">[% c.loc('Edit Entry') %]</a></li>
+  <li><a href="[% c.uri_for('/revision/list', entry.id) %]">[% c.loc('List Revisions') %]</a></li>
+</div>
+<table class="data">
+ <thead>
+  <tr>
+   <th colspan="2">[% c.loc('Entry Details') %]</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><label>[% c.loc('Name') %]</label></td>
+   <td>[% entry.name %]</td>
+  </tr>
+  <tr>
+   <td><label>[% c.loc('Revisions') %]</label></td>
+   <td>[% revision_count %]</td>
+  </tr>
+  <tr>
+   <td><label>[% c.loc('Last Modified') %]</label></td>
+   <td>[% entry.date_last_modified %]</td>
+  </tr>
+  <tr>
+   <td><label>[% c.loc('Created') %]</label></td>
+   <td>[% entry.date_created %]</td>
+  </tr>
+ </tbody>
+</table>
+<table class="data">
+ <thead>
+  <tr>
+   <th colspan="2">[% c.loc('Current Working Entries') %]</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <th>[% c.loc('ID') %]</th>
+   <th>[% c.loc('User') %]</th>
+   <th>[% c.loc('Date Created') %]</th>
+  </tr>
+  [% FOREACH we = entry.working_entries %]
+  <tr>
+   <td><a href="[% c.uri_for('/workingentry/show', we.id) %]">[% we.id %]</td>
+   <td>[% we.user_id %]</td>
+   <td>[% we.date_created %]</td>
+  </tr>
+  [% END %]
+ </tbody>
+</table>

@@ -1,0 +1,7 @@
+ <div id="bd">
+  <div class="yui-g first">
+   <div class="narrow_center">
+    [% content %]
+   </div>
+  </div>
+ </div>

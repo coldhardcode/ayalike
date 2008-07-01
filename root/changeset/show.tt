@@ -1,0 +1,64 @@
+[% IF !changeset.applied %]
+<div id="context_menu">
+ <ul>
+  <li><a href="[% c.uri_for('/changeset/confirm', changeset.id) %]">[% c.loc('Apply to Site') %]</a></li>
+ </ul>
+</div>
+[% END %]
+[% SET site = changeset.site %]
+ <table class="form">
+  <thead>
+   <tr>
+	  <th colspan="2">[% c.loc('ChangeSet Details') %]</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td><label>[% c.loc('Applied') %]</label></td>
+    <td>[% IF changeset.applied %][% c.loc('Yes') %][% ELSE %][% c.loc('No') %][% END %]</td>
+   </tr>
+   <tr>
+    <td><label>[% c.loc('Site') %]</label></td>
+    <td><a href="[% c.uri_for('/site/show', site.id) %]">[% site.name %]</a></td>
+   </tr>
+   <tr>
+    <td><label>[% c.loc('User') %]</label></td>
+    <td>[% changeset.user_id %]</td>
+   </tr>
+   <tr>
+    <td><label>[% c.loc('Comment') %]</label></td>
+    <td>[% changeset.comment %]</td>
+   </tr>
+   <tr>
+    <td><label>[% c.loc('Date to Publish') %]</label></td>
+    <td>[% changeset.date_to_publish %]</td>
+   </tr>
+   <tr>
+    <td><label>[% c.loc('Date Created') %]</label></td>
+    <td>[% changeset.date_created %]</td>
+   </tr>
+  </tbody>
+ </table>
+
+ <table class="data">
+  <thead>
+   <tr>
+    <th colspan="3">Revisions</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <th>[% c.loc('ID') %]</th>
+    <th>[% c.loc('Entry') %]</th>
+    <th>[% c.loc('User') %]</th>
+   </tr>
+   [% FOREACH rev = changeset.revisions %]
+   <tr class="[% IF loop.count % 2 %]odd[% END %]">
+    <td><a href="[% c.uri_for('/revision/show', rev.id) %]">[% rev.id %]</a></td>
+    <td><a href="[% c.uri_for('/entry/show', rev.entry.id) %]">[% rev.entry.name %]</a></td>
+    <td>[% rev.user_id %]</td>
+   </tr>
+   [% END %]
+  </tbody>
+ </table>
+

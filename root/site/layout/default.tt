@@ -1,0 +1,21 @@
+ <div id="bd" class="standard">
+  <div id="welcome">
+   [% c.loc('Welcome [_1]', c.user.id) %] <a href="[% c.uri_for('/auth/logout') %]">[% c.loc('Logout') %]</a>
+  </div>
+  <h1><a href="[% c.uri_for('/default') %]">[% c.loc('Home') %]</a> [% IF site_context %]> [% site_context.name %] [% END %]</h1>
+  <div class="yui-gf">
+   <div id="sidebar" class="yui-u first">
+    <div id="bulletins" class="featurebox">
+     <h3>[% c.loc('Bulletin') %]</h3>
+     <p>Some important information.</p>
+    </div>
+    [% PROCESS menu.tt %]
+   </div>
+   <div id="content" class="yui-u">
+    <div id="success_msg" [% IF !success %]style="display: none;"[% END %]>[% success %]</div>
+    <div id="error_msg" [% IF !error %]style="display: none;"[% END %]>[% error %]</div>
+    <div id="warning_msg" [% IF !warning %]style="display: none;"[% END %]>[% warning %]</div>
+    [% content %]
+   </div>
+  </div>
+ </div>

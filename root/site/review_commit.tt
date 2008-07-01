@@ -1,0 +1,40 @@
+<form method="post" action="[% c.uri_for('/site/commit') %]">
+ <table class="data">
+  <thead>
+   <tr>
+    <th colspan="4">[% c.loc('Working Entries to Commit') %]</th>
+   </tr>
+  </thead>
+  [% IF working_entries %]
+  <tfoot>
+   <tr>
+    <td colspan="4"><label class="[% comment_class %]">[% c.loc('Comment') %]<input type="text" name="comment" /></label><input type="submit" value="[% c.loc('Commit') %]" /></td>
+   </tr>
+  </tfoot>
+  [% END %]
+  <tbody>
+   <tr>
+    <th>&#8730;</th>
+    <th>[% c.loc('Entry') %]</th>
+    <th>[% c.loc('Site') %]</th>
+    <th>[% c.loc('Date Last Modified') %]</th>
+   </tr>
+   [% IF !working_entries %]
+   <tr>
+    <td colspan="4">[% c.loc('No working entries.') %]</td>
+   </tr>
+   [% ELSE %]
+    [% FOREACH we = working_entries %]
+    <tr class="[% IF loop.count % 2 %]odd[% END %] [% IF we.is_out_of_date %]warning[% END %]">
+     [% SET entry = we.entry %]
+     [% SET site = entry.site %]
+     <td><input type="checkbox" name="we_[% we.id %]" [% IF we.is_out_of_date %]disabled="disabled"[% ELSE %]checked="checked"[% END %] /></td>
+     <td><a href="[% c.uri_for('/workingentry/edit', entry.id) %]">[% entry.name %]</a></td>
+     <td><a href="[% c.uri_for('/site/show', site.id) %]">[% site.name %]</a></td>
+     <td>[% we.date_last_modified %]</td>
+    </tr>
+    [% END %]
+   [% END %]
+  </tbody>
+ </table>
+</form>

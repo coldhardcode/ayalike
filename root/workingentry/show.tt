@@ -1,0 +1,29 @@
+<form method="post" action="[% c.uri_for('/workingentry/save', workingentry.entry.id) %]">
+ <input type="hidden" name="working_entry_id" value="[% workingentry.id %]" />
+ <table class="form">
+  <thead>
+   <tr>
+	<th colspan="2">[% c.loc('Entry Details') %]</th>
+   </tr>
+  </thead>
+  <tfoot>
+   <tr>
+    <td colspan="2"><input type="submit" value="Submit"></td>
+   </tr>
+  </tfoot>    
+  <tbody>
+   <tr>
+    <td><label class="[% name_class %]">[% c.loc('Name') %]</label></td>
+    <td>[% workingentry.entry.name %]</td>
+   </tr>
+   <tr>
+    <td><label class="[% name_class %]">[% c.loc('Last Updated') %]</label></td>
+    <td>[% workingentry.date_last_modified %]</td>
+   </tr>
+   <tr>
+    <td><label for="contents" class="[% content_class %]">[% c.loc('Contents') %]</label></td>
+    <td><textarea rows="25" cols="70" readonly="readonly">[% workingentry.contents | html %]</textarea></td>
+   </tr>
+  </tbody>
+ </table>
+</form>

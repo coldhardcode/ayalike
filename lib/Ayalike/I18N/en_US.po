@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: root/admin/site/.svn/text-base/default.tt.svn-base:20 root/admin/site/default.tt:20
+msgid "Action"
+msgstr ""
+
+#: root/entry/.svn/text-base/list.tt.svn-base:12 root/entry/list.tt:12
+msgid "Actions"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/default.tt.svn-base:19 root/admin/site/default.tt:19
+msgid "Active"
+msgstr ""
+
+#: root/site/.svn/text-base/show.tt.svn-base:4 root/site/show.tt:4
+msgid "Add Entry"
+msgstr ""
+
+#: root/.svn/text-base/menu.tt.svn-base:15 root/menu.tt:15
+msgid "Administrada"
+msgstr ""
+
+#: root/.svn/text-base/wrapper.tt.svn-base:13 root/wrapper.tt:13
+msgid "Bulletin"
+msgstr ""
+
+#: root/.svn/text-base/menu.tt.svn-base:6 root/menu.tt:6
+msgid "Choose A Site"
+msgstr ""
+
+#: root/revision/.svn/text-base/show.tmpl.svn-base:24 root/revision/show.tmpl:24 root/site/.svn/text-base/review_commit.tt.svn-base:12 root/site/review_commit.tt:12
+msgid "Comment"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:12 root/default.tt:12 root/site/.svn/text-base/review_commit.tt.svn-base:12 root/site/review_commit.tt:12
+msgid "Commit"
+msgstr ""
+
+#: root/entry/.svn/text-base/create.tt.svn-base:20 root/entry/create.tt:20 root/workingentry/.svn/text-base/edit.tt.svn-base:25 root/workingentry/.svn/text-base/show.tt.svn-base:25 root/workingentry/edit.tt:25 root/workingentry/show.tt:25
+msgid "Contents"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/default.tt.svn-base:4 root/admin/site/default.tt:4
+msgid "Create A New Site"
+msgstr ""
+
+#: root/entry/.svn/text-base/create.tt.svn-base:6 root/entry/create.tt:6
+msgid "Create Entry"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/create.tt.svn-base:6 root/admin/site/create.tt:6
+msgid "Create Site"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:27 root/entry/show.tt:27
+msgid "Created"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:35 root/entry/show.tt:35
+msgid "Current Working Entries"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:54 root/default.tt:54
+msgid "Date"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:42 root/entry/show.tt:42 root/revision/.svn/text-base/list.tt.svn-base:18 root/revision/.svn/text-base/show.tmpl.svn-base:28 root/revision/list.tt:18 root/revision/show.tmpl:28 root/site/.svn/text-base/show.tt.svn-base:28 root/site/show.tt:28
+msgid "Date Created"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:21 root/default.tt:21 root/site/.svn/text-base/review_commit.tt.svn-base:21 root/site/review_commit.tt:21
+msgid "Date Last Modified"
+msgstr ""
+
+#: root/entry/.svn/text-base/list.tt.svn-base:19 root/entry/list.tt:19
+msgid "Details"
+msgstr ""
+
+#: root/revision/.svn/text-base/show.tmpl.svn-base:32 root/revision/show.tmpl:32
+msgid "Diff"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/default.tt.svn-base:29 root/admin/site/default.tt:29 root/entry/.svn/text-base/list.tt.svn-base:20 root/entry/list.tt:20
+msgid "Edit"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:4 root/entry/show.tt:4 root/workingentry/.svn/text-base/edit.tt.svn-base:7 root/workingentry/edit.tt:7
+msgid "Edit Entry"
+msgstr ""
+
+#: root/site/.svn/text-base/show.tt.svn-base:24 root/site/show.tt:24
+msgid "Entries"
+msgstr ""
+
+#: root/entry/.svn/text-base/list.tt.svn-base:5 root/entry/list.tt:5
+#. (site.name)
+msgid "Entries for %1"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:19 root/.svn/text-base/default.tt.svn-base:51 root/default.tt:19 root/default.tt:51 root/revision/.svn/text-base/show.tmpl.svn-base:16 root/revision/show.tmpl:16 root/site/.svn/text-base/review_commit.tt.svn-base:19 root/site/review_commit.tt:19
+msgid "Entry"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:10 root/entry/show.tt:10 root/workingentry/.svn/text-base/show.tt.svn-base:7 root/workingentry/show.tt:7
+msgid "Entry Details"
+msgstr ""
+
+#: root/.svn/text-base/menu.tt.svn-base:10 root/menu.tt:10
+msgid "Go"
+msgstr ""
+
+#: root/.svn/text-base/wrapper.tt.svn-base:9 root/wrapper.tt:9
+msgid "Home"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:50 root/admin/site/.svn/text-base/default.tt.svn-base:15 root/admin/site/default.tt:15 root/default.tt:50 root/entry/.svn/text-base/list.tt.svn-base:10 root/entry/.svn/text-base/show.tt.svn-base:40 root/entry/list.tt:10 root/entry/show.tt:40 root/revision/.svn/text-base/list.tt.svn-base:16 root/revision/list.tt:16
+msgid "ID"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:23 root/entry/show.tt:23
+msgid "Last Modified"
+msgstr ""
+
+#: root/workingentry/.svn/text-base/edit.tt.svn-base:21 root/workingentry/.svn/text-base/show.tt.svn-base:21 root/workingentry/edit.tt:21 root/workingentry/show.tt:21
+msgid "Last Updated"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:45 root/default.tt:45
+msgid "Latest Revisions"
+msgstr ""
+
+#: root/site/.svn/text-base/show.tt.svn-base:5 root/site/show.tt:5
+msgid "List Entries"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:5 root/entry/show.tt:5
+msgid "List Revisions"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/default.tt.svn-base:18 root/admin/site/default.tt:18
+msgid "Locked"
+msgstr ""
+
+#: root/auth/.svn/text-base/default.tmpl.svn-base:10 root/auth/.svn/text-base/default.tmpl.svn-base:15 root/auth/default.tmpl:10 root/auth/default.tmpl:15
+msgid "Login"
+msgstr ""
+
+#: root/.svn/text-base/wrapper.tt.svn-base:6 root/wrapper.tt:6
+msgid "Logout"
+msgstr ""
+
+#: root/.svn/text-base/menu.tt.svn-base:2 root/menu.tt:2
+msgid "Menu"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/create.tt.svn-base:16 root/admin/site/.svn/text-base/default.tt.svn-base:16 root/admin/site/create.tt:16 root/admin/site/default.tt:16 root/entry/.svn/text-base/create.tt.svn-base:16 root/entry/.svn/text-base/list.tt.svn-base:11 root/entry/.svn/text-base/show.tt.svn-base:15 root/entry/create.tt:16 root/entry/list.tt:11 root/entry/show.tt:15 root/site/.svn/text-base/show.tt.svn-base:16 root/site/show.tt:16 root/workingentry/.svn/text-base/edit.tt.svn-base:17 root/workingentry/.svn/text-base/show.tt.svn-base:17 root/workingentry/edit.tt:17 root/workingentry/show.tt:17
+msgid "Name"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:58 root/default.tt:58
+msgid "No revisions."
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:25 root/default.tt:25 root/site/.svn/text-base/review_commit.tt.svn-base:25 root/site/review_commit.tt:25
+msgid "No working entries."
+msgstr ""
+
+#: root/auth/.svn/text-base/default.tmpl.svn-base:24 root/auth/default.tmpl:24
+msgid "Password"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/create.tt.svn-base:20 root/admin/site/.svn/text-base/default.tt.svn-base:17 root/admin/site/create.tt:20 root/admin/site/default.tt:17 root/site/.svn/text-base/show.tt.svn-base:20 root/site/show.tt:20
+msgid "Path"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:12 root/default.tt:12
+msgid "Remove"
+msgstr ""
+
+#: root/revision/.svn/text-base/show.tmpl.svn-base:7 root/revision/show.tmpl:7
+msgid "Revision"
+msgstr ""
+
+#: root/entry/.svn/text-base/show.tt.svn-base:19 root/entry/show.tt:19 root/revision/.svn/text-base/list.tt.svn-base:9 root/revision/list.tt:9
+msgid "Revisions"
+msgstr ""
+
+#: root/revision/.svn/text-base/list.tt.svn-base:7 root/revision/list.tt:7
+#. (entry.id)
+msgid "Revisions for Entry %1"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:20 root/.svn/text-base/default.tt.svn-base:53 root/default.tt:20 root/default.tt:53 root/revision/.svn/text-base/show.tmpl.svn-base:12 root/revision/show.tmpl:12 root/site/.svn/text-base/review_commit.tt.svn-base:20 root/site/review_commit.tt:20
+msgid "Site"
+msgstr ""
+
+#: root/site/.svn/text-base/show.tt.svn-base:11 root/site/show.tt:11
+msgid "Site Details for "
+msgstr ""
+
+#: root/.svn/text-base/menu.tt.svn-base:17 root/admin/site/.svn/text-base/default.tt.svn-base:10 root/admin/site/default.tt:10 root/menu.tt:17
+msgid "Sites"
+msgstr ""
+
+#: root/admin/site/.svn/text-base/create.tt.svn-base:11 root/admin/site/create.tt:11 root/entry/.svn/text-base/create.tt.svn-base:11 root/entry/create.tt:11 root/workingentry/.svn/text-base/edit.tt.svn-base:12 root/workingentry/edit.tt:12
+msgid "Submit"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:52 root/default.tt:52 root/entry/.svn/text-base/show.tt.svn-base:41 root/entry/show.tt:41 root/revision/.svn/text-base/list.tt.svn-base:17 root/revision/.svn/text-base/show.tmpl.svn-base:20 root/revision/list.tt:17 root/revision/show.tmpl:20
+msgid "User"
+msgstr ""
+
+#: root/auth/.svn/text-base/default.tmpl.svn-base:20 root/auth/default.tmpl:20
+msgid "Username"
+msgstr ""
+
+#: root/.svn/text-base/wrapper.tt.svn-base:6 root/wrapper.tt:6
+#. (c.user.id)
+msgid "Welcome %1"
+msgstr ""
+
+#: root/site/.svn/text-base/review_commit.tt.svn-base:6 root/site/review_commit.tt:6
+msgid "Working Entries to Commit"
+msgstr ""
+
+#: root/.svn/text-base/default.tt.svn-base:6 root/default.tt:6
+msgid "Your Working Entries"
+msgstr ""
